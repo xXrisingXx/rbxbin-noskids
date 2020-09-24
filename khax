@@ -1,0 +1,1088 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local KaHax = Instance.new("ScreenGui")
+local frame = Instance.new("Frame")
+local background = Instance.new("ImageLabel")
+local anti = Instance.new("Frame")
+local afrebox = Instance.new("ImageButton")
+local abbox = Instance.new("ImageButton")
+local ntbox = Instance.new("ImageButton")
+local apbox = Instance.new("ImageButton")
+local afbox = Instance.new("ImageButton")
+local asbox = Instance.new("ImageButton")
+local next = Instance.new("TextButton")
+local prev = Instance.new("TextButton")
+local webleft = Instance.new("ImageLabel")
+local line = Instance.new("TextLabel")
+local afre = Instance.new("TextLabel")
+local ab = Instance.new("TextLabel")
+local nt = Instance.new("TextLabel")
+local ap = Instance.new("TextLabel")
+local af = Instance.new("TextLabel")
+local as = Instance.new("TextLabel")
+local Bools = Instance.new("Folder")
+local Bools_2 = Instance.new("Folder")
+local Numbers = Instance.new("Folder")
+local aj = Instance.new("TextLabel")
+local ajbox = Instance.new("ImageButton")
+local ar = Instance.new("TextLabel")
+local arbox = Instance.new("ImageButton")
+local looper = Instance.new("Frame")
+local next_2 = Instance.new("TextButton")
+local prev_2 = Instance.new("TextButton")
+local pumkin = Instance.new("ImageLabel")
+local line_2 = Instance.new("TextLabel")
+local cmd = Instance.new("TextBox")
+local Values = Instance.new("Folder")
+local cmdtime = Instance.new("TextBox")
+local cmdcount = Instance.new("TextBox")
+local cmdloop = Instance.new("TextButton")
+local teleports = Instance.new("Frame")
+local next_3 = Instance.new("TextButton")
+local prev_3 = Instance.new("TextButton")
+local skulls = Instance.new("ImageLabel")
+local line_3 = Instance.new("TextLabel")
+local house = Instance.new("TextButton")
+local reset = Instance.new("TextButton")
+local pads = Instance.new("TextButton")
+local tophouse = Instance.new("TextButton")
+local backhouse = Instance.new("TextButton")
+local fronthouse = Instance.new("TextButton")
+local spawn = Instance.new("TextButton")
+local baseplate = Instance.new("TextButton")
+local undermap = Instance.new("TextButton")
+local edgeofmap = Instance.new("TextButton")
+local void = Instance.new("TextButton")
+local chimney = Instance.new("TextButton")
+local credits = Instance.new("Frame")
+local creds = Instance.new("ImageLabel")
+local creator = Instance.new("TextLabel")
+local credits_2 = Instance.new("TextLabel")
+local line_4 = Instance.new("TextLabel")
+local vw = Instance.new("NumberValue", Values)
+local vc = Instance.new("NumberValue", Values)
+local truefalse = Instance.new("BoolValue", Values)
+vc.Name = "count"
+vw.Name = "wait"
+truefalse.Name = "torf"
+
+--Properties:
+
+KaHax.Name = "KaHax"
+KaHax.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+KaHax.ResetOnSpawn = false
+
+frame.Name = "frame"
+frame.Parent = KaHax
+frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+frame.BackgroundTransparency = 1.000
+frame.BorderSizePixel = 0
+frame.Position = UDim2.new(0.419318169, 0, 0.393665165, 0)
+frame.Size = UDim2.new(0, 100, 0, 100)
+frame.Visible = false
+frame.ZIndex = 0
+
+background.Name = "background"
+background.Parent = frame
+background.AnchorPoint = Vector2.new(0.5, 0.5)
+background.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+background.BackgroundTransparency = 1.000
+background.Position = UDim2.new(0.725000024, 0, 0.5, 0)
+background.Size = UDim2.new(2.82999992, 24, 1.41999996, 24)
+background.ZIndex = 0
+background.Image = "rbxassetid://3570695787"
+background.ImageColor3 = Color3.fromRGB(0, 0, 0)
+background.ScaleType = Enum.ScaleType.Slice
+background.SliceCenter = Rect.new(100, 100, 100, 100)
+background.SliceScale = 0.120
+
+anti.Name = "anti"
+anti.Parent = background
+anti.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+anti.BackgroundTransparency = 1.000
+anti.Size = UDim2.new(0, 307, 0, 165)
+anti.ZIndex = 0
+
+afrebox.Name = "afrebox"
+afrebox.Parent = anti
+afrebox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+afrebox.BorderColor3 = Color3.fromRGB(255, 85, 0)
+afrebox.Position = UDim2.new(0.842684031, 0, 0.258878797, 0)
+afrebox.Size = UDim2.new(0, 20, 0, 20)
+afrebox.ImageColor3 = Color3.fromRGB(255, 85, 0)
+afrebox.ScaleType = Enum.ScaleType.Slice
+afrebox.SliceScale = 3.000
+
+abbox.Name = "abbox"
+abbox.Parent = anti
+abbox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+abbox.BorderColor3 = Color3.fromRGB(255, 85, 0)
+abbox.Position = UDim2.new(0.312228024, 0, 0.252818167, 0)
+abbox.Size = UDim2.new(0, 20, 0, 20)
+abbox.ImageColor3 = Color3.fromRGB(255, 85, 0)
+abbox.ScaleType = Enum.ScaleType.Slice
+abbox.SliceScale = 3.000
+
+ntbox.Name = "ntbox"
+ntbox.Parent = anti
+ntbox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ntbox.BorderColor3 = Color3.fromRGB(255, 85, 0)
+ntbox.Position = UDim2.new(0.842999995, 0, 0.588999987, 0)
+ntbox.Size = UDim2.new(0, 20, 0, 20)
+ntbox.ImageColor3 = Color3.fromRGB(255, 85, 0)
+ntbox.ScaleType = Enum.ScaleType.Slice
+ntbox.SliceScale = 3.000
+
+apbox.Name = "apbox"
+apbox.Parent = anti
+apbox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+apbox.BorderColor3 = Color3.fromRGB(255, 85, 0)
+apbox.Position = UDim2.new(0.312000006, 0, 0.42899999, 0)
+apbox.Size = UDim2.new(0, 20, 0, 20)
+apbox.ImageColor3 = Color3.fromRGB(255, 85, 0)
+apbox.ScaleType = Enum.ScaleType.Slice
+apbox.SliceScale = 3.000
+
+afbox.Name = "afbox"
+afbox.Parent = anti
+afbox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+afbox.BorderColor3 = Color3.fromRGB(255, 85, 0)
+afbox.Position = UDim2.new(0.312000006, 0, 0.588999987, 0)
+afbox.Size = UDim2.new(0, 20, 0, 20)
+afbox.ImageColor3 = Color3.fromRGB(255, 85, 0)
+afbox.ScaleType = Enum.ScaleType.Slice
+afbox.SliceScale = 3.000
+
+asbox.Name = "asbox"
+asbox.Parent = anti
+asbox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+asbox.BorderColor3 = Color3.fromRGB(255, 85, 0)
+asbox.Position = UDim2.new(0.842999995, 0, 0.42899999, 0)
+asbox.Size = UDim2.new(0, 20, 0, 20)
+asbox.ImageColor3 = Color3.fromRGB(255, 85, 0)
+asbox.ScaleType = Enum.ScaleType.Slice
+asbox.SliceScale = 3.000
+
+next.Name = "next"
+next.Parent = anti
+next.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+next.BorderColor3 = Color3.fromRGB(255, 85, 0)
+next.Position = UDim2.new(0.802570939, 0, 0.036144577, 0)
+next.Size = UDim2.new(0, 46, 0, 14)
+next.Font = Enum.Font.SourceSans
+next.Text = "Next"
+next.TextColor3 = Color3.fromRGB(255, 85, 0)
+next.TextScaled = true
+next.TextSize = 14.000
+next.TextWrapped = true
+
+prev.Name = "prev"
+prev.Parent = anti
+prev.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+prev.BorderColor3 = Color3.fromRGB(255, 85, 0)
+prev.Position = UDim2.new(0.0598999262, 0, 0.036144577, 0)
+prev.Size = UDim2.new(0, 46, 0, 14)
+prev.Visible = false
+prev.Font = Enum.Font.SourceSans
+prev.Text = "Previous"
+prev.TextColor3 = Color3.fromRGB(255, 85, 0)
+prev.TextScaled = true
+prev.TextSize = 14.000
+prev.TextWrapped = true
+
+webleft.Name = "webleft"
+webleft.Parent = anti
+webleft.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+webleft.BackgroundTransparency = 1.000
+webleft.Position = UDim2.new(-0.000971592206, 0, 0.170764595, 0)
+webleft.Size = UDim2.new(0, 307, 0, 137)
+webleft.ZIndex = 0
+webleft.Image = "rbxassetid://491303935"
+webleft.ImageColor3 = Color3.fromRGB(255, 85, 0)
+
+line.Name = "line"
+line.Parent = anti
+line.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+line.BorderColor3 = Color3.fromRGB(255, 85, 0)
+line.Position = UDim2.new(-0.00543978298, 0, 0.160843447, 0)
+line.Size = UDim2.new(0, 307, 0, 1)
+line.Font = Enum.Font.SourceSans
+line.Text = ""
+line.TextColor3 = Color3.fromRGB(0, 0, 0)
+line.TextSize = 14.000
+
+afre.Name = "afre"
+afre.Parent = anti
+afre.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+afre.BorderColor3 = Color3.fromRGB(255, 85, 0)
+afre.Position = UDim2.new(0.57099998, 0, 0.27124241, 0)
+afre.Size = UDim2.new(0, 60, 0, 17)
+afre.Font = Enum.Font.SourceSans
+afre.Text = "Anti Freeze"
+afre.TextColor3 = Color3.fromRGB(255, 85, 0)
+afre.TextScaled = true
+afre.TextSize = 14.000
+afre.TextWrapped = true
+
+ab.Name = "ab"
+ab.Parent = anti
+ab.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ab.BorderColor3 = Color3.fromRGB(255, 85, 0)
+ab.Position = UDim2.new(0.0381679386, 0, 0.27123037, 0)
+ab.Size = UDim2.new(0, 60, 0, 17)
+ab.Font = Enum.Font.SourceSans
+ab.Text = "Anti blind"
+ab.TextColor3 = Color3.fromRGB(255, 85, 0)
+ab.TextScaled = true
+ab.TextSize = 14.000
+ab.TextWrapped = true
+
+nt.Name = "nt"
+nt.Parent = anti
+nt.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+nt.BorderColor3 = Color3.fromRGB(255, 85, 0)
+nt.Position = UDim2.new(0.57099998, 0, 0.589242399, 0)
+nt.Size = UDim2.new(0, 60, 0, 17)
+nt.Font = Enum.Font.SourceSans
+nt.Text = "No Tools"
+nt.TextColor3 = Color3.fromRGB(255, 85, 0)
+nt.TextScaled = true
+nt.TextSize = 14.000
+nt.TextWrapped = true
+
+ap.Name = "ap"
+ap.Parent = anti
+ap.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ap.BorderColor3 = Color3.fromRGB(255, 85, 0)
+ap.Position = UDim2.new(0.0379999988, 0, 0.429242432, 0)
+ap.Size = UDim2.new(0, 60, 0, 17)
+ap.Font = Enum.Font.SourceSans
+ap.Text = "Anti Punish"
+ap.TextColor3 = Color3.fromRGB(255, 85, 0)
+ap.TextScaled = true
+ap.TextSize = 14.000
+ap.TextWrapped = true
+
+af.Name = "af"
+af.Parent = anti
+af.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+af.BorderColor3 = Color3.fromRGB(255, 85, 0)
+af.Position = UDim2.new(0.0381679386, 0, 0.58944869, 0)
+af.Size = UDim2.new(0, 60, 0, 17)
+af.Font = Enum.Font.SourceSans
+af.Text = "Anti Flash"
+af.TextColor3 = Color3.fromRGB(255, 85, 0)
+af.TextScaled = true
+af.TextSize = 14.000
+af.TextWrapped = true
+
+as.Name = "as"
+as.Parent = anti
+as.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+as.BorderColor3 = Color3.fromRGB(255, 85, 0)
+as.Position = UDim2.new(0.57099998, 0, 0.429242432, 0)
+as.Size = UDim2.new(0, 60, 0, 17)
+as.Font = Enum.Font.SourceSans
+as.Text = "Anti Seizure"
+as.TextColor3 = Color3.fromRGB(255, 85, 0)
+as.TextScaled = true
+as.TextSize = 14.000
+as.TextWrapped = true
+
+Bools.Name = "Bools"
+Bools.Parent = anti
+
+Bools_2.Name = "Bools"
+Bools_2.Parent = Bools
+
+Numbers.Name = "Numbers"
+Numbers.Parent = Bools
+
+aj.Name = "aj"
+aj.Parent = anti
+aj.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+aj.BorderColor3 = Color3.fromRGB(255, 85, 0)
+aj.Position = UDim2.new(0.0381679386, 0, 0.753085017, 0)
+aj.Size = UDim2.new(0, 60, 0, 17)
+aj.Font = Enum.Font.SourceSans
+aj.Text = "Anti Jail"
+aj.TextColor3 = Color3.fromRGB(255, 85, 0)
+aj.TextScaled = true
+aj.TextSize = 14.000
+aj.TextWrapped = true
+
+ajbox.Name = "ajbox"
+ajbox.Parent = anti
+ajbox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ajbox.BorderColor3 = Color3.fromRGB(255, 85, 0)
+ajbox.Position = UDim2.new(0.312000006, 0, 0.753000021, 0)
+ajbox.Size = UDim2.new(0, 20, 0, 20)
+ajbox.ImageColor3 = Color3.fromRGB(255, 85, 0)
+ajbox.ScaleType = Enum.ScaleType.Slice
+ajbox.SliceScale = 3.000
+
+ar.Name = "ar"
+ar.Parent = anti
+ar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ar.BorderColor3 = Color3.fromRGB(255, 85, 0)
+ar.Position = UDim2.new(0.569000006, 0, 0.753000021, 0)
+ar.Size = UDim2.new(0, 60, 0, 17)
+ar.Font = Enum.Font.SourceSans
+ar.Text = "Auto Respawn"
+ar.TextColor3 = Color3.fromRGB(255, 85, 0)
+ar.TextScaled = true
+ar.TextSize = 14.000
+ar.TextWrapped = true
+
+arbox.Name = "arbox"
+arbox.Parent = anti
+arbox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+arbox.BorderColor3 = Color3.fromRGB(255, 85, 0)
+arbox.Position = UDim2.new(0.842999995, 0, 0.753000021, 0)
+arbox.Size = UDim2.new(0, 20, 0, 20)
+arbox.ImageColor3 = Color3.fromRGB(255, 85, 0)
+arbox.ScaleType = Enum.ScaleType.Slice
+arbox.SliceScale = 3.000
+
+looper.Name = "looper"
+looper.Parent = background
+looper.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+looper.BackgroundTransparency = 1.000
+looper.Size = UDim2.new(0, 307, 0, 165)
+looper.Visible = false
+looper.ZIndex = 0
+
+next_2.Name = "next"
+next_2.Parent = looper
+next_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+next_2.BorderColor3 = Color3.fromRGB(255, 85, 0)
+next_2.Position = UDim2.new(0.802570939, 0, 0.036144577, 0)
+next_2.Size = UDim2.new(0, 46, 0, 14)
+next_2.Font = Enum.Font.SourceSans
+next_2.Text = "Next"
+next_2.TextColor3 = Color3.fromRGB(255, 85, 0)
+next_2.TextScaled = true
+next_2.TextSize = 14.000
+next_2.TextWrapped = true
+
+prev_2.Name = "prev"
+prev_2.Parent = looper
+prev_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+prev_2.BorderColor3 = Color3.fromRGB(255, 85, 0)
+prev_2.Position = UDim2.new(0.0598999262, 0, 0.036144577, 0)
+prev_2.Size = UDim2.new(0, 46, 0, 14)
+prev_2.Font = Enum.Font.SourceSans
+prev_2.Text = "Previous"
+prev_2.TextColor3 = Color3.fromRGB(255, 85, 0)
+prev_2.TextScaled = true
+prev_2.TextSize = 14.000
+prev_2.TextWrapped = true
+
+pumkin.Name = "pumkin"
+pumkin.Parent = looper
+pumkin.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+pumkin.BackgroundTransparency = 1.000
+pumkin.Position = UDim2.new(-0.000971592206, 0, 0.170764595, 0)
+pumkin.Size = UDim2.new(0, 307, 0, 137)
+pumkin.ZIndex = 0
+pumkin.Image = "http://www.roblox.com/asset/?id=5728804652"
+pumkin.ImageColor3 = Color3.fromRGB(255, 85, 0)
+
+line_2.Name = "line"
+line_2.Parent = looper
+line_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+line_2.BorderColor3 = Color3.fromRGB(255, 85, 0)
+line_2.Position = UDim2.new(-0.00543978298, 0, 0.160843447, 0)
+line_2.Size = UDim2.new(0, 307, 0, 1)
+line_2.Font = Enum.Font.SourceSans
+line_2.Text = ""
+line_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+line_2.TextSize = 14.000
+
+cmd.Name = "cmd"
+cmd.Parent = looper
+cmd.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+cmd.BorderColor3 = Color3.fromRGB(255, 85, 0)
+cmd.Position = UDim2.new(0.058631923, 0, 0.660606027, 0)
+cmd.Size = UDim2.new(0, 200, 0, 36)
+cmd.Font = Enum.Font.SourceSans
+cmd.Text = ""
+cmd.TextColor3 = Color3.fromRGB(255, 85, 0)
+cmd.TextScaled = true
+cmd.TextSize = 14.000
+cmd.TextWrapped = true
+
+Values.Name = "Values"
+Values.Parent = looper
+
+cmdtime.Name = "cmdtime"
+cmdtime.Parent = looper
+cmdtime.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+cmdtime.BorderColor3 = Color3.fromRGB(255, 85, 0)
+cmdtime.Position = UDim2.new(0.058631923, 0, 0.333333343, 0)
+cmdtime.Size = UDim2.new(0, 109, 0, 36)
+cmdtime.Font = Enum.Font.SourceSans
+cmdtime.Text = ""
+cmdtime.TextColor3 = Color3.fromRGB(255, 85, 0)
+cmdtime.TextScaled = true
+cmdtime.TextSize = 14.000
+cmdtime.TextWrapped = true
+
+cmdcount.Name = "cmdcount"
+cmdcount.Parent = looper
+cmdcount.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+cmdcount.BorderColor3 = Color3.fromRGB(255, 85, 0)
+cmdcount.Position = UDim2.new(0.596091151, 0, 0.333333343, 0)
+cmdcount.Size = UDim2.new(0, 109, 0, 36)
+cmdcount.Font = Enum.Font.SourceSans
+cmdcount.Text = ""
+cmdcount.TextColor3 = Color3.fromRGB(255, 85, 0)
+cmdcount.TextScaled = true
+cmdcount.TextSize = 14.000
+cmdcount.TextWrapped = true
+
+cmdloop.Name = "cmdloop"
+cmdloop.Parent = looper
+cmdloop.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+cmdloop.BorderColor3 = Color3.fromRGB(255, 85, 0)
+cmdloop.Position = UDim2.new(0.771986961, 0, 0.660606027, 0)
+cmdloop.Size = UDim2.new(0, 55, 0, 36)
+cmdloop.Font = Enum.Font.SourceSans
+cmdloop.Text = "OFF"
+cmdloop.TextColor3 = Color3.fromRGB(255, 85, 0)
+cmdloop.TextScaled = true
+cmdloop.TextSize = 14.000
+cmdloop.TextWrapped = true
+
+teleports.Name = "teleports"
+teleports.Parent = background
+teleports.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+teleports.BackgroundTransparency = 1.000
+teleports.Size = UDim2.new(0, 307, 0, 165)
+teleports.Visible = false
+teleports.ZIndex = 0
+
+next_3.Name = "next"
+next_3.Parent = teleports
+next_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+next_3.BorderColor3 = Color3.fromRGB(255, 85, 0)
+next_3.Position = UDim2.new(0.802570939, 0, 0.036144577, 0)
+next_3.Size = UDim2.new(0, 46, 0, 14)
+next_3.Visible = false
+next_3.Font = Enum.Font.SourceSans
+next_3.Text = "Next"
+next_3.TextColor3 = Color3.fromRGB(255, 85, 0)
+next_3.TextScaled = true
+next_3.TextSize = 14.000
+next_3.TextWrapped = true
+
+prev_3.Name = "prev"
+prev_3.Parent = teleports
+prev_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+prev_3.BorderColor3 = Color3.fromRGB(255, 85, 0)
+prev_3.Position = UDim2.new(0.0598999262, 0, 0.036144577, 0)
+prev_3.Size = UDim2.new(0, 46, 0, 14)
+prev_3.Font = Enum.Font.SourceSans
+prev_3.Text = "Previous"
+prev_3.TextColor3 = Color3.fromRGB(255, 85, 0)
+prev_3.TextScaled = true
+prev_3.TextSize = 14.000
+prev_3.TextWrapped = true
+
+skulls.Name = "skulls"
+skulls.Parent = teleports
+skulls.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+skulls.BackgroundTransparency = 1.000
+skulls.Position = UDim2.new(-0.000971592206, 0, 0.170764595, 0)
+skulls.Size = UDim2.new(0, 307, 0, 137)
+skulls.ZIndex = 0
+skulls.Image = "http://www.roblox.com/asset/?id=5729109850"
+skulls.ImageColor3 = Color3.fromRGB(255, 85, 0)
+
+line_3.Name = "line"
+line_3.Parent = teleports
+line_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+line_3.BorderColor3 = Color3.fromRGB(255, 85, 0)
+line_3.Position = UDim2.new(-0.00543978298, 0, 0.160843447, 0)
+line_3.Size = UDim2.new(0, 307, 0, 1)
+line_3.Font = Enum.Font.SourceSans
+line_3.Text = ""
+line_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+line_3.TextSize = 14.000
+
+house.Name = "house"
+house.Parent = teleports
+house.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+house.BorderColor3 = Color3.fromRGB(255, 85, 0)
+house.Position = UDim2.new(0.0586319193, 0, 0.26060605, 0)
+house.Size = UDim2.new(0, 77, 0, 19)
+house.Font = Enum.Font.SourceSans
+house.Text = "House"
+house.TextColor3 = Color3.fromRGB(255, 85, 0)
+house.TextScaled = true
+house.TextSize = 14.000
+house.TextWrapped = true
+
+reset.Name = "reset"
+reset.Parent = teleports
+reset.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+reset.BorderColor3 = Color3.fromRGB(255, 85, 0)
+reset.Position = UDim2.new(0.0586319193, 0, 0.430303037, 0)
+reset.Size = UDim2.new(0, 77, 0, 19)
+reset.Font = Enum.Font.SourceSans
+reset.Text = "Admin reset"
+reset.TextColor3 = Color3.fromRGB(255, 85, 0)
+reset.TextScaled = true
+reset.TextSize = 14.000
+reset.TextWrapped = true
+
+pads.Name = "pads"
+pads.Parent = teleports
+pads.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+pads.BorderColor3 = Color3.fromRGB(255, 85, 0)
+pads.Position = UDim2.new(0.0586319193, 0, 0.618181825, 0)
+pads.Size = UDim2.new(0, 77, 0, 19)
+pads.Font = Enum.Font.SourceSans
+pads.Text = "Get All Pads"
+pads.TextColor3 = Color3.fromRGB(255, 85, 0)
+pads.TextScaled = true
+pads.TextSize = 14.000
+pads.TextWrapped = true
+
+tophouse.Name = "tophouse"
+tophouse.Parent = teleports
+tophouse.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+tophouse.BorderColor3 = Color3.fromRGB(255, 85, 0)
+tophouse.Position = UDim2.new(0.0586319193, 0, 0.793939412, 0)
+tophouse.Size = UDim2.new(0, 77, 0, 19)
+tophouse.Font = Enum.Font.SourceSans
+tophouse.Text = "Top Of House"
+tophouse.TextColor3 = Color3.fromRGB(255, 85, 0)
+tophouse.TextScaled = true
+tophouse.TextSize = 14.000
+tophouse.TextWrapped = true
+
+backhouse.Name = "backhouse"
+backhouse.Parent = teleports
+backhouse.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+backhouse.BorderColor3 = Color3.fromRGB(255, 85, 0)
+backhouse.Position = UDim2.new(0.374592841, 0, 0.793939412, 0)
+backhouse.Size = UDim2.new(0, 77, 0, 19)
+backhouse.Font = Enum.Font.SourceSans
+backhouse.Text = "Back Of House"
+backhouse.TextColor3 = Color3.fromRGB(255, 85, 0)
+backhouse.TextScaled = true
+backhouse.TextSize = 14.000
+backhouse.TextWrapped = true
+
+fronthouse.Name = "fronthouse"
+fronthouse.Parent = teleports
+fronthouse.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+fronthouse.BorderColor3 = Color3.fromRGB(255, 85, 0)
+fronthouse.Position = UDim2.new(0.374592841, 0, 0.618181825, 0)
+fronthouse.Size = UDim2.new(0, 77, 0, 19)
+fronthouse.Font = Enum.Font.SourceSans
+fronthouse.Text = "Front Of House"
+fronthouse.TextColor3 = Color3.fromRGB(255, 85, 0)
+fronthouse.TextScaled = true
+fronthouse.TextSize = 14.000
+fronthouse.TextWrapped = true
+
+spawn.Name = "spawn"
+spawn.Parent = teleports
+spawn.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+spawn.BorderColor3 = Color3.fromRGB(255, 85, 0)
+spawn.Position = UDim2.new(0.374592841, 0, 0.430303037, 0)
+spawn.Size = UDim2.new(0, 77, 0, 19)
+spawn.Font = Enum.Font.SourceSans
+spawn.Text = "Spawn"
+spawn.TextColor3 = Color3.fromRGB(255, 85, 0)
+spawn.TextScaled = true
+spawn.TextSize = 14.000
+spawn.TextWrapped = true
+
+baseplate.Name = "baseplate"
+baseplate.Parent = teleports
+baseplate.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+baseplate.BorderColor3 = Color3.fromRGB(255, 85, 0)
+baseplate.Position = UDim2.new(0.374592841, 0, 0.26060605, 0)
+baseplate.Size = UDim2.new(0, 77, 0, 19)
+baseplate.Font = Enum.Font.SourceSans
+baseplate.Text = "Baseplate"
+baseplate.TextColor3 = Color3.fromRGB(255, 85, 0)
+baseplate.TextScaled = true
+baseplate.TextSize = 14.000
+baseplate.TextWrapped = true
+
+undermap.Name = "undermap"
+undermap.Parent = teleports
+undermap.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+undermap.BorderColor3 = Color3.fromRGB(255, 85, 0)
+undermap.Position = UDim2.new(0.677524447, 0, 0.793939412, 0)
+undermap.Size = UDim2.new(0, 77, 0, 19)
+undermap.Font = Enum.Font.SourceSans
+undermap.Text = "Under Map"
+undermap.TextColor3 = Color3.fromRGB(255, 85, 0)
+undermap.TextScaled = true
+undermap.TextSize = 14.000
+undermap.TextWrapped = true
+
+edgeofmap.Name = "edgeofmap"
+edgeofmap.Parent = teleports
+edgeofmap.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+edgeofmap.BorderColor3 = Color3.fromRGB(255, 85, 0)
+edgeofmap.Position = UDim2.new(0.677524447, 0, 0.618181825, 0)
+edgeofmap.Size = UDim2.new(0, 77, 0, 19)
+edgeofmap.Font = Enum.Font.SourceSans
+edgeofmap.Text = "Edge Of Map"
+edgeofmap.TextColor3 = Color3.fromRGB(255, 85, 0)
+edgeofmap.TextScaled = true
+edgeofmap.TextSize = 14.000
+edgeofmap.TextWrapped = true
+
+void.Name = "void"
+void.Parent = teleports
+void.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+void.BorderColor3 = Color3.fromRGB(255, 85, 0)
+void.Position = UDim2.new(0.677524447, 0, 0.430303037, 0)
+void.Size = UDim2.new(0, 77, 0, 19)
+void.Font = Enum.Font.SourceSans
+void.Text = "Void"
+void.TextColor3 = Color3.fromRGB(255, 85, 0)
+void.TextScaled = true
+void.TextSize = 14.000
+void.TextWrapped = true
+
+chimney.Name = "chimney"
+chimney.Parent = teleports
+chimney.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+chimney.BorderColor3 = Color3.fromRGB(255, 85, 0)
+chimney.Position = UDim2.new(0.677524447, 0, 0.26060605, 0)
+chimney.Size = UDim2.new(0, 77, 0, 19)
+chimney.Font = Enum.Font.SourceSans
+chimney.Text = "Chimney"
+chimney.TextColor3 = Color3.fromRGB(255, 85, 0)
+chimney.TextScaled = true
+chimney.TextSize = 14.000
+chimney.TextWrapped = true
+
+credits.Name = "credits"
+credits.Parent = KaHax
+credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+credits.BackgroundTransparency = 1.000
+credits.BorderSizePixel = 0
+credits.Position = UDim2.new(0.419318169, 0, 0.393665165, 0)
+credits.Size = UDim2.new(0, 100, 0, 100)
+credits.Visible = true
+credits.ZIndex = 0
+
+creds.Name = "creds"
+creds.Parent = credits
+creds.AnchorPoint = Vector2.new(0.5, 0.5)
+creds.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+creds.BackgroundTransparency = 1.000
+creds.Position = UDim2.new(0.740000069, 0, 0.700000048, 0)
+creds.Size = UDim2.new(2.38000011, 24, 1.41999996, 24)
+creds.ZIndex = 0
+creds.Image = "rbxassetid://3570695787"
+creds.ImageColor3 = Color3.fromRGB(0, 0, 0)
+creds.ScaleType = Enum.ScaleType.Slice
+creds.SliceCenter = Rect.new(100, 100, 100, 100)
+creds.SliceScale = 0.120
+
+creator.Name = "creator"
+creator.Parent = creds
+creator.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+creator.BackgroundTransparency = 1.000
+creator.Position = UDim2.new(0, 0, 0.265060246, 0)
+creator.Size = UDim2.new(0, 262, 0, 122)
+creator.Font = Enum.Font.SourceSans
+creator.Text = "KohlsHax v2:          made by @xXrisingXx#3622"
+creator.TextColor3 = Color3.fromRGB(255, 85, 0)
+creator.TextScaled = true
+creator.TextSize = 14.000
+creator.TextWrapped = true
+
+credits_2.Name = "credits"
+credits_2.Parent = creds
+credits_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+credits_2.BackgroundTransparency = 1.000
+credits_2.Size = UDim2.new(0, 262, 0, 44)
+credits_2.Font = Enum.Font.SourceSans
+credits_2.Text = "CREDITS"
+credits_2.TextColor3 = Color3.fromRGB(255, 85, 0)
+credits_2.TextScaled = true
+credits_2.TextSize = 14.000
+credits_2.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+credits_2.TextWrapped = true
+
+line_4.Name = "line"
+line_4.Parent = creds
+line_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+line_4.BorderColor3 = Color3.fromRGB(255, 85, 0)
+line_4.Position = UDim2.new(0, 0, 0.265060246, 0)
+line_4.Size = UDim2.new(0, 262, 0, 0)
+line_4.Font = Enum.Font.SourceSans
+line_4.Text = ""
+line_4.TextColor3 = Color3.fromRGB(255, 85, 0)
+line_4.TextScaled = true
+line_4.TextSize = 14.000
+line_4.TextWrapped = true
+wait(10)
+credits.Visible = false
+-- Scripts:
+
+local function GSJYIO_fake_script() -- background.dragger 
+	local script = Instance.new('Script', background)
+
+	local frame = script.Parent
+	
+	frame.Draggable = true
+	frame.Active = true
+end
+coroutine.wrap(GSJYIO_fake_script)()
+local function FOCAL_fake_script() -- afrebox.checkboxs 
+	local script = Instance.new('Script', afrebox)
+
+	local on = false
+	
+	script.Parent.MouseButton1Down:Connect(function()
+		if on == false then
+			script.Parent.Image = "rbxassetid://61153606"
+			on = true
+		elseif on == true then
+			script.Parent.Image = ""
+			on = false
+		end
+	end)
+end
+coroutine.wrap(FOCAL_fake_script)()
+local function MRJWYQA_fake_script() -- abbox.checkboxs 
+	local script = Instance.new('Script', abbox)
+
+	local on = false
+	
+	script.Parent.MouseButton1Down:Connect(function()
+		if on == false then
+			script.Parent.Image = "rbxassetid://61153606"
+			on = true
+		elseif on == true then
+			script.Parent.Image = ""
+			on = false
+		end
+	end)
+end
+coroutine.wrap(MRJWYQA_fake_script)()
+local function YHCQLD_fake_script() -- ntbox.checkboxs 
+	local script = Instance.new('Script', ntbox)
+
+	local on = false
+	
+	script.Parent.MouseButton1Down:Connect(function()
+		if on == false then
+			script.Parent.Image = "rbxassetid://61153606"
+			on = true
+		elseif on == true then
+			script.Parent.Image = ""
+			on = false
+		end
+	end)
+end
+coroutine.wrap(YHCQLD_fake_script)()
+local function SJRYVG_fake_script() -- apbox.checkboxs 
+	local script = Instance.new('Script', apbox)
+
+	local on = false
+	
+	script.Parent.MouseButton1Down:Connect(function()
+		if on == false then
+			script.Parent.Image = "rbxassetid://61153606"
+			on = true
+		elseif on == true then
+			script.Parent.Image = ""
+			on = false
+		end
+	end)
+end
+coroutine.wrap(SJRYVG_fake_script)()
+local function SONVPAB_fake_script() -- afbox.checkboxs 
+	local script = Instance.new('Script', afbox)
+
+	local on = false
+	
+	script.Parent.MouseButton1Down:Connect(function()
+		if on == false then
+			script.Parent.Image = "rbxassetid://61153606"
+			on = true
+		elseif on == true then
+			script.Parent.Image = ""
+			on = false
+		end
+	end)
+end
+coroutine.wrap(SONVPAB_fake_script)()
+local function SMTI_fake_script() -- asbox.checkboxs 
+	local script = Instance.new('Script', asbox)
+
+	local on = false
+	
+	script.Parent.MouseButton1Down:Connect(function()
+		if on == false then
+			script.Parent.Image = "rbxassetid://61153606"
+			on = true
+		elseif on == true then
+			script.Parent.Image = ""
+			on = false
+		end
+	end)
+end
+coroutine.wrap(SMTI_fake_script)()
+local function MVXCUHR_fake_script() -- next.pager 
+	local script = Instance.new('Script', next)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.looper.Visible = true
+	end)
+end
+coroutine.wrap(MVXCUHR_fake_script)()
+local function SQXTW_fake_script() -- ajbox.checkboxs 
+	local script = Instance.new('Script', ajbox)
+
+	local on = false
+	
+	script.Parent.MouseButton1Down:Connect(function()
+		if on == false then
+			script.Parent.Image = "rbxassetid://61153606"
+			on = true
+		elseif on == true then
+			script.Parent.Image = ""
+			on = false
+		end
+	end)
+end
+coroutine.wrap(SQXTW_fake_script)()
+local function PVSISZB_fake_script() -- arbox.checkboxs 
+	local script = Instance.new('Script', arbox)
+
+	local on = false
+	
+	script.Parent.MouseButton1Down:Connect(function()
+		if on == false then
+			script.Parent.Image = "rbxassetid://61153606"
+			on = true
+		elseif on == true then
+			script.Parent.Image = ""
+			on = false
+		end
+	end)
+end
+coroutine.wrap(PVSISZB_fake_script)()
+local function XLBLEZU_fake_script() -- next_2.pager 
+	local script = Instance.new('Script', next_2)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.teleports.Visible = true
+	end)
+end
+coroutine.wrap(XLBLEZU_fake_script)()
+local function BJUQU_fake_script() -- prev_2.pager 
+	local script = Instance.new('Script', prev_2)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.anti.Visible = true
+	end)
+end
+coroutine.wrap(BJUQU_fake_script)()
+local function ZFAHFA_fake_script() -- cmdtime.Script 
+	local script = Instance.new('Script', cmdtime)
+
+	while wait(0.001) do
+		script.Parent.Parent.Values.wait.Value = script.Parent.Text
+	end
+end
+coroutine.wrap(ZFAHFA_fake_script)()
+local function DVXFQE_fake_script() -- cmdloop.Script 
+	local script = Instance.new('Script', cmdloop)
+
+	local v = script.Parent.Parent.Values
+	
+	while wait(0.001) do
+		if v.count.Value == 0 or v.count.Value < 0 then
+			v.torf.Value = false
+			script.Parent.Text = "OFF"
+		end
+	end
+end
+coroutine.wrap(DVXFQE_fake_script)()
+local function PSPAEP_fake_script() -- cmdloop.Script 
+	local script = Instance.new('Script', cmdloop)
+
+	local v = script.Parent.Parent.Values
+	
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Values.count.Value = script.Parent.Parent.cmdcount.Text
+		if v.torf.Value == false then
+			v.torf.Value = true
+			script.Parent.Text = "LOOPING"
+			-------------------------------------------------------------
+			while wait(v.wait.Value) do
+				local db = false
+				if v.torf.Value == true and db == false then db = true
+					v.count.Value = v.count.Value - 1
+					game:GetService'Players':Chat(tostring(script.Parent.Parent.cmd.Text))
+					db = false
+				end
+			end
+			-------------------------------------------------------------		
+		elseif v.torf.Value == true then
+			v.torf.Value = false
+			script.Parent.Text = "OFF"
+		end
+	end)
+end
+coroutine.wrap(PSPAEP_fake_script)()
+-- next_3.pager is disabled.
+local function NLWR_fake_script() -- prev_3.pager 
+	local script = Instance.new('Script', prev_3)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.looper.Visible = true
+	end)
+end
+coroutine.wrap(NLWR_fake_script)()
+local function PAEDXZX_fake_script() -- house.tphandler 
+	local script = Instance.new('Script', house)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-27.8644, 8.23, 72.0989))
+	end)
+end
+coroutine.wrap(PAEDXZX_fake_script)()
+local function ELXNF_fake_script() -- reset.tphandler 
+	local script = Instance.new('Script', reset)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(game.Workspace.Terrain._Game.Admin.Regen.CFrame))
+	end)
+end
+coroutine.wrap(ELXNF_fake_script)()
+local function YWFML_fake_script() -- pads.tphandler 
+	local script = Instance.new('Script', pads)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-12.6811085, 8.62999916, 94.2793655))
+		wait()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-16.6822491, 8.62009811, 94.2510757))
+		wait()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-20.6922798, 8.62999916, 94.057785))
+		wait()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-25.2887306, 8.62791443, 94.2289276))
+		wait()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-28.5159836, 8.62999916, 94.4296722))
+		wait()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-32.4557953, 8.62999916, 94.4649429))
+		wait()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-36.694622, 8.62999916, 94.9627762))
+		wait()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-41.0636101, 8.62999916, 94.1970444))
+		wait()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-45.0423775, 8.62999916, 93.9000854))
+		wait()
+	end)
+end
+coroutine.wrap(YWFML_fake_script)()
+local function HOGLQ_fake_script() -- tophouse.tphandler 
+	local script = Instance.new('Script', tophouse)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-30.3405, 46.1899, 51.2311))
+	end)
+end
+coroutine.wrap(HOGLQ_fake_script)()
+local function MIWV_fake_script() -- backhouse.tphandler 
+	local script = Instance.new('Script', backhouse)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-30.4796, 6.89394, 114.692))
+	end)
+end
+coroutine.wrap(MIWV_fake_script)()
+local function ZKCJ_fake_script() -- fronthouse.tphandler 
+	local script = Instance.new('Script', fronthouse)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-40.6813, 6.94836, 39.9518))
+	end)
+end
+coroutine.wrap(ZKCJ_fake_script)()
+local function HXDLVY_fake_script() -- spawn.tphandler 
+	local script = Instance.new('Script', spawn)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-40.9436, 3.71682, -28.7827))
+	end)
+end
+coroutine.wrap(HXDLVY_fake_script)()
+local function UTHWT_fake_script() -- baseplate.tphandler 
+	local script = Instance.new('Script', baseplate)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(game.Workspace.Terrain._Game.Workspace.Baseplate.CFrame))
+	end)
+end
+coroutine.wrap(UTHWT_fake_script)()
+local function HYUTN_fake_script() -- undermap.tphandler 
+	local script = Instance.new('Script', undermap)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-59.3461, -23.8312, 44.4819))
+	end)
+end
+coroutine.wrap(HYUTN_fake_script)()
+local function UZTN_fake_script() -- edgeofmap.tphandler 
+	local script = Instance.new('Script', edgeofmap)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-493.687, 6.89394, 496.84))
+	end)
+end
+coroutine.wrap(UZTN_fake_script)()
+local function JPYT_fake_script() -- void.tphandler 
+	local script = Instance.new('Script', void)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-6.89429e+06, 1.5083e+06, -1.85154e+06))
+	end)
+end
+coroutine.wrap(JPYT_fake_script)()
+local function NSDLKJW_fake_script() -- chimney.tphandler 
+	local script = Instance.new('Script', chimney)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-13.6622, 32.47, 54.1389))
+	end)
+end
+coroutine.wrap(NSDLKJW_fake_script)()
+local function CXDEFSS_fake_script() -- KaHax.opener 
+	local script = Instance.new('Script', KaHax)
+
+	local ui = game:GetService("UserInputService")
+	
+	ui.InputBegan:Connect(function(be)
+		if be.KeyCode == Enum.KeyCode.LeftAlt then
+			if script.Parent.frame.Visible == false then
+				script.Parent.frame.Visible = true
+			elseif be.KeyCode == Enum.KeyCode.LeftAlt and script.Parent.frame.Visible == true then
+				script.Parent.frame.Visible = false
+			end
+		end
+	end)
+end
+coroutine.wrap(CXDEFSS_fake_script)()
